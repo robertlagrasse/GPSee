@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "852492350924",
+    "firebase_url": "https://gpsee-caf27.firebaseio.com",
+    "project_id": "gpsee-caf27",
+    "storage_bucket": "gpsee-caf27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852492350924:android:dece525f2e6efec8",
+        "android_client_info": {
+          "package_name": "com.umpquariversoftware.gpsee.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852492350924-ftg3qus1tbdsp4qdc8ia69g05r3u0l1v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.umpquariversoftware.gpsee.debug",
+            "certificate_hash": "3784eaff855c4bc2da5a50a3d7dfd2a6f3a7187d"
+          }
+        },
+        {
+          "client_id": "852492350924-jk4hrvimmmrj5cjkmltohj8pt12asflc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsHZWUKx2ISEx9jrz2CtAXrm1a93w-0f8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852492350924-jk4hrvimmmrj5cjkmltohj8pt12asflc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852492350924:android:4d60b46ccc508748",
+        "android_client_info": {
+          "package_name": "com.umpquariversoftware.gpsee.release"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852492350924-offj2rm5qsu7feet0sn8m8cmh3ujfqjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.umpquariversoftware.gpsee.release",
+            "certificate_hash": "fe6ea87cff91894fd721825a02b237e6033fb0f0"
+          }
+        },
+        {
+          "client_id": "852492350924-jk4hrvimmmrj5cjkmltohj8pt12asflc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsHZWUKx2ISEx9jrz2CtAXrm1a93w-0f8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852492350924-jk4hrvimmmrj5cjkmltohj8pt12asflc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

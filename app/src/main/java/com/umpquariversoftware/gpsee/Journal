@@ -1,0 +1,127 @@
+Sandi is looking for an app that converts between different GPS formats. Popular format types
+are here.
+
+https://www.maptools.com/tutorials/lat_lon/formats
+
+Conversion is simple math. Presentation is basic. Let's make it worth having...
+
+Wish list:
+FAB crosshair to drop current location into screen
+math - Translations
+web link -Info page for units
+Copy/paste in/out of app
+Recognizes popular formats
+location object - Label coordinates with names
+Build a route between a bunch of coordinates
+location object - Select a group of coordinates to display in a google map
+location object - Location information drive/hike/snow, cell coverage
+location object - Associated coordinates (where parking is if it's a hiking location, etc)
+import many coordinates via text file
+export
+
+Coordinates are more than coordinates. They're a location. Build a location object that
+holds the following:
+
+All stored coordinates are decimal degrees. Users see other values as the result of translations.
+Lat (float)
+long (float)
+name (string)
+description (string)
+tags (ArrayList of strings)
+Location Type (enumerated list? - codes for several different location types. Flexible!)
+
+Input/Output -
+Copy/Paste is no big deal. Build a button for this in DMS/DDM representations. The challenge
+will still be on the pasting side, but that's the other side's design issue.
+
+Once my base data structures are written, life is pretty simple. It's a matter of knowing what
+the formats for the most popular systems are, and writing parsers and output formatters. Grind.
+
+This can be a highly modularized process. I can add pieces in later.
+
+UI
+I'll have to give some thought as to how I want to present the locations. I can see different
+presentation methodologies based on tablet vs smart phone UI's, so a master detail flow out of
+the gate is probably a safe architectural choice.
+
+Main Screen should be simple conversions. Input in any format, immediately translates to
+other formats. Touch a button next to any of the display types to copy to clipboard. Easy Peasy.
+FAB on the main screen pushes the location to the cloud. It should pop another screen asking
+for details.
+
+Should be another screen to scroll through stored locations. Probably a snappy recyclerview to
+flip through the names, which updates a scrollview full of information related to that location.
+
+Shared Locations drop into a simple shared flat file, tagged with an md5 hash of the object.
+So, there'd be an upload of a bunch of locations, then the creation of a collection,
+which contains all of those locations.
+Sharing should always be a collection of locations, whether that's 1 location or 1000.
+
+Back End - All Hail Firebase!
+Integrating the following features:
+Authentication
+Database
+Storage (Likely necessary for pics)
+Crash Reporting (Probably)
+Notifications
+AdMob
+Dynamic Links (If this does what I think it does, it'll make sharing easier, and share requests
+will actually help proliferate the app)
+
+Tasks:
+
+1) Firebase Integration. May as well get this out of the way right from the beginning. All data
+storage is going to revolve around the platform, so we may as well start here. Get all of the
+for sure components integrated. Build the release version and deal with the signing certificate
+process up front. Document as you proceed.
+
+2) Build data structure for Locations, and write a populated object to firebase
+
+3) Layout for Main Screen. Sketch out a mockup. Build the interface. id's for everything.
+Strings for internationalization. Custom toolbar. Reserved space for AdMobs on the bottom.
+
+4) Integrate adMob
+
+5) Logic for the main screen
+
+6) Layout for the Saved Locations Browser
+
+7) Logic for the Saved Locations Browser
+
+8) Buttons and Logic to facilitate sharing
+
+(Possible Release Point)
+
+9) Import/Export file format
+
+Step 1 Completed.
+Step 2 Completed.
+
+
+
+
+
+
+
+_____________________________________________________________________________________
+This is a bit away from the core, and may need to be its own thing...
+I want to include an audience engagement engine in this application. Each time the app starts,
+it'll check in with firebase to see if it's got the latest audience engagement. If not, it
+pulls the information from Firebase.
+
+That information will include:
+A greeting
+The attributes of several elements of the layout
+
+Once the information is pulled down, the engagement activity starts. The layout file will be simple,
+but it will contain a ton of elements. The firebase information determines which elements are
+visible, and what the visible elements look like. The downloaded attributes are then set in java,
+and the user is presented with a unique view each time, using the same base code.
+
+Button presses and other input values drop to generic placeholders in a generic object that is
+then written back to firebase. In this way, any kind of information can be reported back and
+parsed.
+
+The user can choose to engage at that time, or not. A menu option on the main screen will allow
+a return to the engagement application.
+
